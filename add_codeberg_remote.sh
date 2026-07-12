@@ -20,9 +20,8 @@ echo "Adding codeberg remote with URL: $CODEBERG_URL"
 git remote add codeberg "$CODEBERG_URL"
 
 echo "Setting push URLs for origin..."
-git remote set-url --unset --push origin
-git remote set-url --add --push origin "$ORIGIN_URL"
-git remote set-url --add --push origin "$CODEBERG_URL"
+git remote set-url --push origin "$ORIGIN_URL"
+git remote set-url --push --add origin "$CODEBERG_URL"
 
 git remote -v
 
