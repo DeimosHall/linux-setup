@@ -8,6 +8,8 @@ git config --global init.defaultBranch main
 # git config --global core.autocrlf true
 git config --global core.autocrlf input
 git config --global credential.helper store
+# Set origin as default because I use Codeberg as a mirror
+git config --global checkout.defaultRemote origin
 
 echo "Configuration applied:"
 git config --global --list
